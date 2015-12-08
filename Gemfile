@@ -1,5 +1,6 @@
 source 'http://rubygems.org'
 
+gem 'activeadmin', '~> 1.0.0.pre2'
 gem 'devise'
 
 gem 'starter_generators', :git => "http://github.com/rbetina/starter_generators.git"
