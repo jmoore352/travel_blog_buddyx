@@ -1,0 +1,28 @@
+<div class="page-header">
+
+</div>
+<div class="container-fluid">
+
+
+
+<div class="col-md-offset-2 col-md-8 col-xs-12">
+    <div class="panel panel-default">
+      <div class="panel-heading">
+        <h3 class="panel-title">
+          <% photos = @photos.where(:location_id => @loc) %>
+       <%= photos.first.location.city_country %>
+        </h3>
+      </div>
+       <div class="panel-body">
+       <ul class="list-group">
+
+      <% photos.each do |photo| %>
+
+          <li class="list-group-item"> <img src="<%= photo.image_url %>" class="img-responsive"></li>
+      <% end  %>
+</ul>
+
+  </div>
+</div>
+</div>   <!--column end -->
+</div>

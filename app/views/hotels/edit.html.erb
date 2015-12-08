@@ -1,0 +1,82 @@
+<!-- Validation failure messages -->
+<% if @hotel.errors.any? %>
+  <% @hotel.errors.full_messages.each do |message| %>
+    <div class="alert alert-dismissable alert-danger">
+      <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+      <%= message %>
+    </div>
+  <% end %>
+<% end %>
+
+<div class="page-header">
+  <h3>Edit Hotel #<%= @hotel.id %></h3>
+</div>
+
+<div class="row">
+  <div class="col-md-12">
+    <form action="/update_hotel/<%= @hotel.id %>" method="post">
+      <!-- Hidden input for authenticity token to protect from forgery -->
+      <input name="authenticity_token" type="hidden" value="<%= form_authenticity_token %>">
+
+      <!-- Label and input for description -->
+      <div class="form-group">
+        <label for="description" class="control-label">
+          Description
+        </label>
+
+        <textarea id="description" name="description" placeholder="Description" class="form-control" rows="3"><%= @hotel.description %></textarea>
+      </div>
+
+      <!-- Label and input for link -->
+      <div class="form-group">
+        <label for="link" class="control-label">
+          Link
+        </label>
+
+        <input type="text" id="link" name="link" placeholder="Link" class="form-control" value="<%= @hotel.link %>">
+      </div>
+
+      <!-- Label and input for our_rating -->
+      <div class="form-group">
+        <label for="our_rating" class="control-label">
+          Our rating
+        </label>
+
+        <input type="text" id="our_rating" name="our_rating" placeholder="Our rating" class="form-control" value="<%= @hotel.our_rating %>">
+      </div>
+
+      <!-- Label and input for our_review -->
+      <div class="form-group">
+        <label for="our_review" class="control-label">
+          Our review
+        </label>
+
+        <textarea id="our_review" name="our_review" placeholder="Our review" class="form-control" rows="3"><%= @hotel.our_review %></textarea>
+      </div>
+
+      <!-- Label and input for location_id -->
+      <div class="form-group">
+        <label for="location_id" class="control-label">
+          Location
+        </label>
+
+        <input type="text" id="location_id" name="location_id" placeholder="Location" class="form-control" value="<%= @hotel.location_id %>">
+      </div>
+
+      <!-- Label and input for image -->
+      <div class="form-group">
+        <label for="image" class="control-label">
+          Image
+        </label>
+
+        <input type="text" id="image" name="image" placeholder="Image" class="form-control" value="<%= @hotel.image %>">
+      </div>
+
+      <button class="btn btn-warning">
+        Update Hotel
+      </button>
+      or
+      <a href="/hotels/<%= @hotel.id %>">Cancel</a>
+    </form>
+  </div>
+</div>

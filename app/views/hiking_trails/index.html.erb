@@ -1,0 +1,56 @@
+<div class="page-header">
+</div>
+
+<div class="container-fluid">
+<div class="row">
+    <!-- list of all trails-->
+
+<% @hiking_trails.each do |trail| %>
+
+
+  <div class="col-md-4 col-xs-12">
+    <div class="panel panel-default">
+      <div class="panel-heading">
+        <h3 class="panel-title">
+          <a href="/hiking_trails/<%= trail.id %>"><%=  trail.description.titleize %>, <%=trail.location.city_country.capitalize%>
+          </a>
+        </h3>
+      </div>
+      <div class="panel-body">
+        <a href="/hiking_trails/<%=trail.id%>">
+           <img src="<%=trail.image %>" class="img-responsive">
+        </a>
+
+
+<div class="well">
+  <ul class="list-group">
+
+
+     <li class="list-group-item"><strong>Our Rating(1-5): </strong>
+
+     <% if trail.our_rating == 1 %>
+        <i class="fa fa-star"></i><i class="fa fa-star-o"></i><i class="fa fa-star-o"></i><i class="fa fa-star-o"></i><i class="fa fa-star-o"></i>
+     <% elsif trail.our_rating == 2 %>
+        <i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star-o"></i><i class="fa fa-star-o"></i><i class="fa fa-star-o"></i>
+     <% elsif trail.our_rating == 3 %>
+        <i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star-o"></i><i class="fa fa-star-o"></i>
+     <% elsif trail.our_rating == 4 %>
+        <i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star-o"></i>
+     <% elsif trail.our_rating == 5 %>
+        <i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i>
+     <% end  %>
+     </li>
+     <li class="list-group-item"><strong>Our Review: </strong><%= trail.our_review %></li>
+     <li class="list-group-item"><strong>Trail Info: </strong><a href="<%=trail.link%>">Click Here</a></li>
+
+</ul>
+
+  </div>
+  </div>
+</div>
+</div>   <!--column end -->
+      <% end %>
+
+
+</div>   <!--row end -->
+</div>    <!--container end -->

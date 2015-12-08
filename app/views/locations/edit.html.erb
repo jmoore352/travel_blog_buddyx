@@ -1,0 +1,100 @@
+<!-- Validation failure messages -->
+<% if @location.errors.any? %>
+  <% @location.errors.full_messages.each do |message| %>
+    <div class="alert alert-dismissable alert-danger">
+      <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+      <%= message %>
+    </div>
+  <% end %>
+<% end %>
+
+<div class="page-header">
+  <h3>Edit Location #<%= @location.id %></h3>
+</div>
+
+<div class="row">
+  <div class="col-md-12">
+    <form action="/update_location/<%= @location.id %>" method="post">
+      <!-- Hidden input for authenticity token to protect from forgery -->
+      <input name="authenticity_token" type="hidden" value="<%= form_authenticity_token %>">
+
+      <!-- Label and input for category -->
+      <div class="form-group">
+        <label for="category" class="control-label">
+          Category
+        </label>
+
+        <input type="text" id="category" name="category" placeholder="Category" class="form-control" value="<%= @location.category %>">
+      </div>
+
+      <!-- Label and input for our_review -->
+      <div class="form-group">
+        <label for="our_review" class="control-label">
+          Our review
+        </label>
+
+        <textarea id="our_review" name="our_review" placeholder="Our review" class="form-control" rows="3"><%= @location.our_review %></textarea>
+      </div>
+
+      <!-- Label and input for destination_summary -->
+      <div class="form-group">
+        <label for="destination_summary" class="control-label">
+          Destination summary
+        </label>
+
+        <textarea id="destination_summary" name="destination_summary" placeholder="Destination summary" class="form-control" rows="3"><%= @location.destination_summary %></textarea>
+      </div>
+
+      <!-- Label and input for our_rating -->
+      <div class="form-group">
+        <label for="our_rating" class="control-label">
+          Our rating
+        </label>
+
+        <input type="text" id="our_rating" name="our_rating" placeholder="Our rating" class="form-control" value="<%= @location.our_rating %>">
+      </div>
+
+      <!-- Label and input for price -->
+      <div class="form-group">
+        <label for="price" class="control-label">
+          Price
+        </label>
+
+        <input type="text" id="price" name="price" placeholder="Price" class="form-control" value="<%= @location.price %>">
+      </div>
+
+      <!-- Label and input for city_country -->
+      <div class="form-group">
+        <label for="city_country" class="control-label">
+          City country
+        </label>
+
+        <input type="text" id="city_country" name="city_country" placeholder="City country" class="form-control" value="<%= @location.city_country %>">
+      </div>
+
+      <!-- Label and input for date -->
+      <div class="form-group">
+        <label for="date" class="control-label">
+          Date
+        </label>
+
+        <input type="text" id="date" name="date" placeholder="Date" class="form-control" value="<%= @location.date %>">
+      </div>
+
+      <!-- Label and input for image -->
+      <div class="form-group">
+        <label for="image" class="control-label">
+          Image
+        </label>
+
+        <input type="text" id="image" name="image" placeholder="Image" class="form-control" value="<%= @location.image %>">
+      </div>
+
+      <button class="btn btn-warning">
+        Update Location
+      </button>
+      or
+      <a href="/locations/<%= @location.id %>">Cancel</a>
+    </form>
+  </div>
+</div>

@@ -1,0 +1,79 @@
+<div class="page-header">
+ <h1>
+
+   <!-- <a href="/locations/new" class="btn btn-lg btn-success">New Location</a> -->
+  </h1>
+</div>
+
+
+<div class="container-fluid">
+<div class="row">
+    <!-- list of all locations-->
+<% newloc = @locations.sort_by(&:our_rating) %>
+<% newloc1 = newloc.reverse %>
+<% newloc1.each do |location| %>
+
+
+  <div class="col-md-4 col-xs-12">
+    <div class="panel panel-default">
+      <div class="panel-heading">
+        <h3 class="panel-title">
+          <a href="/locations/<%= location.id %>"><%=  location.destination_summary.titleize %>
+          </a>
+        </h3>
+      </div>
+      <div class="panel-body">
+        <a href="/locations/<%= location.id %>">
+           <img src="<%= location.image %>" class="img-responsive">
+        </a>
+
+
+<div class="well">
+  <!-- List group -->
+  <ul class="list-group">
+
+     <li class="list-group-item"><strong>Country: </strong><%= location.city_country %></li>
+     <li class="list-group-item"><strong>Category: </strong><%= location.category.capitalize %></li>
+     <li class="list-group-item"><strong>Location Summary: </strong><%= location.destination_summary %></li>
+     <li class="list-group-item"><strong>Our Rating(1-5): </strong>
+
+     <% if location.our_rating == 1 %>
+        <i class="fa fa-star"></i><i class="fa fa-star-o"></i><i class="fa fa-star-o"></i><i class="fa fa-star-o"></i><i class="fa fa-star-o"></i>
+     <% elsif location.our_rating == 2 %>
+        <i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star-o"></i><i class="fa fa-star-o"></i><i class="fa fa-star-o"></i>
+     <% elsif location.our_rating == 3 %>
+        <i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star-o"></i><i class="fa fa-star-o"></i>
+     <% elsif location.our_rating == 4 %>
+        <i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star-o"></i>
+     <% elsif location.our_rating == 5 %>
+        <i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i>
+     <% end  %>
+     </li>
+
+
+     <li class="list-group-item"><strong>Our Review: </strong><%= location.our_review %></li>
+          <li class="list-group-item"><strong>Price(1-5): </strong>
+     <% if location.price.to_i == 1 %>
+        <i class="fa fa-usd"></i>
+     <% elsif location.price.to_i == 2 %>
+        <i class="fa fa-usd"></i><i class="fa fa-usd"></i>
+     <% elsif location.price.to_i == 3 %>
+        <i class="fa fa-usd"></i><i class="fa fa-usd"></i><i class="fa fa-usd"></i>
+     <% elsif location.price.to_i == 4 %>
+        <i class="fa fa-usd"></i><i class="fa fa-usd"></i><i class="fa fa-usd"></i><i class="fa fa-usd"></i>
+     <% elsif location.price.to_i == 5 %>
+        <i class="fa fa-usd"></i><i class="fa fa-usd"></i><i class="fa fa-usd"></i><i class="fa fa-usd"></i><i class="fa fa-usd"></i>
+     <% end  %>
+     </li>
+</ul>
+
+  </div>
+  </div>
+</div>
+</div>   <!--column end -->
+      <% end %>
+
+
+</div>   <!--row end -->
+</div>    <!--container end -->
+
