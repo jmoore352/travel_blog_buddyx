@@ -6,8 +6,8 @@ Rails.application.routes.draw do
 
   root "locations#index"
 
-  get "/photos/new", :controller => "photos", :action => "new"
-  post "/create_photo", :controller => "photos", :action => "create"
+ # get "/photos/new", :controller => "photos", :action => "new"
+ # post "/create_photo", :controller => "photos", :action => "create"
 
   # READ
   get "/photos", :controller => "photos", :action => "index"
@@ -15,51 +15,51 @@ Rails.application.routes.draw do
   get "/photos/location/:id", :controller => "photos", :action => "showbylocation"
 
   # UPDATE
-  get "/photos/:id/edit", :controller => "photos", :action => "edit"
-  post "/update_photo/:id", :controller => "photos", :action => "update"
+#  get "/photos/:id/edit", :controller => "photos", :action => "edit"
+ # post "/update_photo/:id", :controller => "photos", :action => "update"
 
   # DELETE
-  get "/delete_photo/:id", :controller => "photos", :action => "destroy"
+ # get "/delete_photo/:id", :controller => "photos", :action => "destroy"
   #------------------------------
 
   # Routes for the Hiking_trail resource:
   # CREATE
-  get "/hiking_trails/new", :controller => "hiking_trails", :action => "new"
-  post "/create_hiking_trail", :controller => "hiking_trails", :action => "create"
+ # get "/hiking_trails/new", :controller => "hiking_trails", :action => "new"
+ # post "/create_hiking_trail", :controller => "hiking_trails", :action => "create"
 
   # READ
   get "/hiking_trails", :controller => "hiking_trails", :action => "index"
   get "/hiking_trails/:id", :controller => "hiking_trails", :action => "show"
 
   # UPDATE
-  get "/hiking_trails/:id/edit", :controller => "hiking_trails", :action => "edit"
-  post "/update_hiking_trail/:id", :controller => "hiking_trails", :action => "update"
+#  get "/hiking_trails/:id/edit", :controller => "hiking_trails", :action => "edit"
+#  post "/update_hiking_trail/:id", :controller => "hiking_trails", :action => "update"
 
   # DELETE
-  get "/delete_hiking_trail/:id", :controller => "hiking_trails", :action => "destroy"
+#  get "/delete_hiking_trail/:id", :controller => "hiking_trails", :action => "destroy"
   #------------------------------
 
   # Routes for the Hotel resource:
   # CREATE
-  get "/hotels/new", :controller => "hotels", :action => "new"
-  post "/create_hotel", :controller => "hotels", :action => "create"
+ # get "/hotels/new", :controller => "hotels", :action => "new"
+ # post "/create_hotel", :controller => "hotels", :action => "create"
 
   # READ
   get "/hotels", :controller => "hotels", :action => "index"
   get "/hotels/:id", :controller => "hotels", :action => "show"
 
   # UPDATE
-  get "/hotels/:id/edit", :controller => "hotels", :action => "edit"
-  post "/update_hotel/:id", :controller => "hotels", :action => "update"
+#  get "/hotels/:id/edit", :controller => "hotels", :action => "edit"
+#  post "/update_hotel/:id", :controller => "hotels", :action => "update"
 
   # DELETE
-  get "/delete_hotel/:id", :controller => "hotels", :action => "destroy"
+ # get "/delete_hotel/:id", :controller => "hotels", :action => "destroy"
   #------------------------------
 
   # Routes for the Location resource:
   # CREATE
-  get "/locations/new", :controller => "locations", :action => "new"
-  post "/create_location", :controller => "locations", :action => "create"
+#  get "/locations/new", :controller => "locations", :action => "new"
+#  post "/create_location", :controller => "locations", :action => "create"
 
   # READ
   get "/locations", :controller => "locations", :action => "index"
@@ -69,11 +69,11 @@ Rails.application.routes.draw do
   get "/locations/categorysort/:id", :controller => "locations", :action => "showbycategory"
 
   # UPDATE
-  get "/locations/:id/edit", :controller => "locations", :action => "edit"
-  post "/update_location/:id", :controller => "locations", :action => "update"
+ # get "/locations/:id/edit", :controller => "locations", :action => "edit"
+ # post "/update_location/:id", :controller => "locations", :action => "update"
 
   # DELETE
-  get "/delete_location/:id", :controller => "locations", :action => "destroy"
+ # get "/delete_location/:id", :controller => "locations", :action => "destroy"
   #------------------------------
 
   # The priority is based upon order of creation: first created -> highest priority.
