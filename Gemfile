@@ -6,6 +6,7 @@ gem 'devise'
 group :production do
   gem 'pg'
   gem 'rails_12factor'
+  gem 'country-select'
 end
 
 gem 'starter_generators', :git => "http://github.com/rbetina/starter_generators.git"
@@ -55,5 +56,7 @@ end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
+
+
 
 ruby "2.1.5"
