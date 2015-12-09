@@ -7,7 +7,7 @@ ActiveAdmin.register Location do
 
   form do |f|
     f.inputs 'Details' do
-      f.input :city_country, :as => :string
+      f.input :city_country, :as => :string, :category, :our_review, :destination_summary, :our_rating, :price, :date, :image
     end
     f.actions
   end
