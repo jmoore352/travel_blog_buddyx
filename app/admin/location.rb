@@ -7,14 +7,14 @@ ActiveAdmin.register Location do
 
   form do |f|
     f.inputs 'Details' do
-      f.input :city_country, :as => :string,
+      f.input :city_country, :as => :string
 
-      f.input  :category,               :as => :string,
-      f.input :our_review,              :as => :text,
-      f.input :destination_summary,     :as => :text,
-      f.input :our_rating,             :as => :integer,
-      f.input :price,                 :as => :string,
-      f.input :date,                  :as => :date,
+      f.input  :category,               :as => :string
+      f.input :our_review,              :as => :text
+      f.input :destination_summary,     :as => :text
+      f.input :our_rating,             :as => :integer
+      f.input :price,                 :as => :string
+      f.input :date,                  :as => :date
       f.input :image,                 :as => :string
     end
     f.actions
