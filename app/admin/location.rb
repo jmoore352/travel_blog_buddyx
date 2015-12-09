@@ -12,9 +12,9 @@ ActiveAdmin.register Location do
       f.input  :category,               :as => :string
       f.input :our_review,              :as => :text
       f.input :destination_summary,     :as => :text
-      f.input :our_rating,             :as => :integer
+      f.input :our_rating,             :as => :string
       f.input :price,                 :as => :string
-      f.input :date,                  :as => :date
+      f.input :date,                  :as => :string
       f.input :image,                 :as => :string
     end
     f.actions
