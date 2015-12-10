@@ -25,7 +25,17 @@
 <div class="well">
   <ul class="list-group">
 
-     <li class="list-group-item"><strong>Our Rating(1-5): </strong><%= hotel.our_rating %></li>
+     <li class="list-group-item"><strong>Our Rating(1-5): </strong><% if hotel.our_rating == 1 %>
+        <i class="fa fa-star"></i><i class="fa fa-star-o"></i><i class="fa fa-star-o"></i><i class="fa fa-star-o"></i><i class="fa fa-star-o"></i>
+     <% elsif hotel.our_rating == 2 %>
+        <i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star-o"></i><i class="fa fa-star-o"></i><i class="fa fa-star-o"></i>
+     <% elsif hotel.our_rating == 3 %>
+        <i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star-o"></i><i class="fa fa-star-o"></i>
+     <% elsif hotel.our_rating == 4 %>
+        <i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star-o"></i>
+     <% elsif hotel.our_rating == 5 %>
+        <i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i>
+     <% end  %></li>
      <li class="list-group-item"><strong>Our Review: </strong><%= hotel.our_review %></li>
      <li class="list-group-item"><strong>Hotel Website: </strong><a href="<%=hotel.link%>">Click Here</a></li>
 
