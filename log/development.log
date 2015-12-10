@@ -10613,3 +10613,289 @@ Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bd
 
 
 Started GET "/assets/jquery_ujs.self-d456baa54c1fa6be2ec3711f0a72ddf7a5b2f34a6b4f515f33767d6207b7d4b3.js?body=1" for ::1 at 2015-12-08 23:58:47 -0600
+
+
+Started GET "/admin/locations" for ::1 at 2015-12-09 02:24:23 -0600
+  [1m[36mActiveRecord::SchemaMigration Load (0.0ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by Admin::LocationsController#index as HTML
+  [1m[35mAdminUser Load (0.0ms)[0m  SELECT  "admin_users".* FROM "admin_users" WHERE "admin_users"."id" = ?  ORDER BY "admin_users"."id" ASC LIMIT 1  [["id", 1]]
+  [1m[36m (1.0ms)[0m  [1mSELECT COUNT(count_column) FROM (SELECT  1 AS count_column FROM "locations" LIMIT 30 OFFSET 0) subquery_for_count[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(count_column) FROM (SELECT  1 AS count_column FROM "locations" LIMIT 30 OFFSET 0) subquery_for_count
+  [1m[36m (0.0ms)[0m  [1mSELECT COUNT(*) FROM "locations"[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(count_column) FROM (SELECT  1 AS count_column FROM "locations" LIMIT 30 OFFSET 0) subquery_for_count
+  [1m[36mLocation Load (0.0ms)[0m  [1mSELECT  "locations".* FROM "locations"  ORDER BY "locations"."id" desc LIMIT 30 OFFSET 0[0m
+  [1m[35mPhoto Load (1.0ms)[0m  SELECT "photos".* FROM "photos"
+  [1m[36mHikingTrail Load (0.0ms)[0m  [1mSELECT "hiking_trails".* FROM "hiking_trails"[0m
+  [1m[35mHotel Load (0.0ms)[0m  SELECT "hotels".* FROM "hotels"
+  Rendered C:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/activeadmin-1.0.0.pre2/app/views/active_admin/resource/index.html.arb (3988.9ms)
+Completed 200 OK in 4326ms (Views: 4102.1ms | ActiveRecord: 8.0ms)
+
+
+Started GET "/admin/locations/new" for ::1 at 2015-12-09 02:24:38 -0600
+Processing by Admin::LocationsController#new as HTML
+  [1m[36mAdminUser Load (0.0ms)[0m  [1mSELECT  "admin_users".* FROM "admin_users" WHERE "admin_users"."id" = ?  ORDER BY "admin_users"."id" ASC LIMIT 1[0m  [["id", 1]]
+  Rendered C:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/activeadmin-1.0.0.pre2/app/views/active_admin/resource/new.html.arb (1811.7ms)
+Completed 500 Internal Server Error in 1841ms (ActiveRecord: 0.0ms)
+
+ActionView::Template::Error (Unable to find input class IntegerInput):
+    1: insert_tag renderer_for(:new)
+  app/admin/location.rb:15:in `block (3 levels) in <top (required)>'
+  app/admin/location.rb:9:in `block (2 levels) in <top (required)>'
+
+
+  Rendered C:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_source.erb (1.0ms)
+  Rendered C:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (19.0ms)
+  Rendered C:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (2.0ms)
+  Rendered C:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (118.2ms)
+  Rendered C:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (1.0ms)
+  Rendered C:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (1.0ms)
+  Rendered C:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (1.0ms)
+  Rendered C:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.0ms)
+  Rendered C:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (98.1ms)
+  Rendered C:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (1.0ms)
+  Rendered C:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (1.0ms)
+  Rendered C:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (233.3ms)
+
+
+Started GET "/admin/locations/new" for ::1 at 2015-12-09 02:26:08 -0600
+Processing by Admin::LocationsController#new as HTML
+  [1m[35mAdminUser Load (0.0ms)[0m  SELECT  "admin_users".* FROM "admin_users" WHERE "admin_users"."id" = ?  ORDER BY "admin_users"."id" ASC LIMIT 1  [["id", 1]]
+  Rendered C:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/activeadmin-1.0.0.pre2/app/views/active_admin/resource/new.html.arb (1641.4ms)
+Completed 500 Internal Server Error in 1743ms (ActiveRecord: 6.0ms)
+
+LoadError (cannot load such file -- formtastic/inputs/date_input):
+  app/admin/location.rb:17:in `block (3 levels) in <top (required)>'
+  app/admin/location.rb:9:in `block (2 levels) in <top (required)>'
+
+
+  Rendered C:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_source.erb (2.0ms)
+  Rendered C:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (20.0ms)
+  Rendered C:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (2.0ms)
+  Rendered C:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (108.2ms)
+  Rendered C:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (0.0ms)
+  Rendered C:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (1.0ms)
+  Rendered C:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.0ms)
+  Rendered C:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (2.0ms)
+  Rendered C:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (97.1ms)
+  Rendered C:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (1.0ms)
+  Rendered C:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (1.0ms)
+  Rendered C:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (212.3ms)
+
+
+Started GET "/admin/locations/new" for ::1 at 2015-12-09 02:26:33 -0600
+Processing by Admin::LocationsController#new as HTML
+  [1m[36mAdminUser Load (1.0ms)[0m  [1mSELECT  "admin_users".* FROM "admin_users" WHERE "admin_users"."id" = ?  ORDER BY "admin_users"."id" ASC LIMIT 1[0m  [["id", 1]]
+  Rendered C:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/activeadmin-1.0.0.pre2/app/views/active_admin/resource/new.html.arb (1807.7ms)
+Completed 200 OK in 1908ms (Views: 1828.7ms | ActiveRecord: 5.0ms)
+
+
+Started GET "/assets/active_admin.self-3a32e8ca0da0551874ea112c554152833fd7d4d31a02e719121ac14116b5ea62.css?body=1" for ::1 at 2015-12-09 02:26:36 -0600
+
+
+Started GET "/assets/jquery-ui/core.self-93be4d22eda916787802a64d8f88b52db8a9027d4ccbbc0942625324a7d12d44.js?body=1" for ::1 at 2015-12-09 02:26:36 -0600
+
+
+Started GET "/assets/jquery.self-a714331225dda820228db323939889f149aec0127aeb06255646b616ba1ca419.js?body=1" for ::1 at 2015-12-09 02:26:36 -0600
+
+
+Started GET "/assets/jquery-ui/datepicker.self-6267be6d4d0f0e8665be3b4d6ac07f40ba23a32aff8eaa5d1bfc00f76a9eeae7.js?body=1" for ::1 at 2015-12-09 02:26:36 -0600
+
+
+Started GET "/assets/jquery-ui/widget.self-c1602241ddc51216b58391768667068867b8e15b9efc722befcd25771eda6819.js?body=1" for ::1 at 2015-12-09 02:26:36 -0600
+
+
+Started GET "/assets/jquery-ui/button.self-4d4f21ba77bbf8cc08ae65e2b6329a7a1b952b32c3ba7bffca8313e7e8c93d0c.js?body=1" for ::1 at 2015-12-09 02:26:36 -0600
+
+
+Started GET "/assets/jquery-ui/mouse.self-c513294e8da73f31f84ba3ef11e2a1180a47faea0eb2fea4a53fc26153dd21fd.js?body=1" for ::1 at 2015-12-09 02:26:36 -0600
+
+
+Started GET "/assets/jquery-ui/draggable.self-debcca3d0d5d9afe2fe91a6fd1aebdb41ca0a55f2f6017352e6c02b6d8a6e64c.js?body=1" for ::1 at 2015-12-09 02:26:36 -0600
+
+
+Started GET "/assets/jquery-ui/position.self-e693ced4ecfa1a276f0b794f32c1d30d792764b08788bf68ecfa3b388c291333.js?body=1" for ::1 at 2015-12-09 02:26:36 -0600
+
+
+Started GET "/assets/jquery-ui/resizable.self-60b870565f3cd62982c1907828119bb51f42ec8228d5e23868153edc3abc685c.js?body=1" for ::1 at 2015-12-09 02:26:37 -0600
+
+
+Started GET "/assets/jquery-ui/dialog.self-5a6c7980dfa3f6b74445b0f4b20eed799ee65363163500ed7f032e603d6b022d.js?body=1" for ::1 at 2015-12-09 02:26:37 -0600
+
+
+Started GET "/assets/jquery-ui/sortable.self-df2d80a36f9dfbe0facc596ccd92af83ca50d38e4cd6a84810aaf5d40b8cd181.js?body=1" for ::1 at 2015-12-09 02:26:37 -0600
+
+
+Started GET "/assets/jquery-ui/tabs.self-dc07b44bf1b926c8d28ccd2658e30933881e5329348caf70cf305c3943f6bbd7.js?body=1" for ::1 at 2015-12-09 02:26:37 -0600
+
+
+Started GET "/assets/active_admin/jquery_ui.self-01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b.js?body=1" for ::1 at 2015-12-09 02:26:37 -0600
+
+
+Started GET "/assets/jquery_ujs.self-d456baa54c1fa6be2ec3711f0a72ddf7a5b2f34a6b4f515f33767d6207b7d4b3.js?body=1" for ::1 at 2015-12-09 02:26:37 -0600
+
+
+Started GET "/assets/active_admin/base.self-ab2cb3098b53fe7d229937d768d701e8f4013f2a5aea7988d8f2149fa40426db.js?body=1" for ::1 at 2015-12-09 02:26:37 -0600
+
+
+Started GET "/assets/active_admin/lib/batch_actions.self-10ee4c07784b00259ca97a02c4e7fb53c1b27ebe5653a3b910426b4ea0941250.js?body=1" for ::1 at 2015-12-09 02:26:37 -0600
+
+
+Started GET "/assets/active_admin/lib/checkbox-toggler.self-ffdc88fc1b3b6bcfac3e314f191fc486175ab5a4b5daab87af6bd208cb483bd8.js?body=1" for ::1 at 2015-12-09 02:26:37 -0600
+
+
+Started GET "/assets/active_admin/lib/dropdown-menu.self-161387c54d1640bd9f174301b77d73ea88ce6d7daf0d7356bd50b4d0143d1b72.js?body=1" for ::1 at 2015-12-09 02:26:37 -0600
+
+
+Started GET "/assets/active_admin/lib/flash.self-8f05a5d9328ea28fca100b057787fbfb567986513c5f1735ea48fad8f9571c10.js?body=1" for ::1 at 2015-12-09 02:26:37 -0600
+
+
+Started GET "/assets/active_admin/lib/has_many.self-ece319debdc01ca5096ae8ac6c130ffc0decab382543b4b94e18591375d3d3bb.js?body=1" for ::1 at 2015-12-09 02:26:37 -0600
+
+
+Started GET "/assets/active_admin/lib/modal_dialog.self-0e86d9de4b99cb242de337a342f957f4872f686afc40f31f32d855672b1cd878.js?body=1" for ::1 at 2015-12-09 02:26:37 -0600
+
+
+Started GET "/assets/active_admin/lib/per_page.self-d7697643296439a8f6aadbf22a229d8ce9b4e8e530ca854164398141006bcfda.js?body=1" for ::1 at 2015-12-09 02:26:37 -0600
+
+
+Started GET "/assets/active_admin/lib/table-checkbox-toggler.self-f5200d732ec9ffd4ee8fd1fe11524ad7b54a67f6c0ef447a29d119ece2dcecdb.js?body=1" for ::1 at 2015-12-09 02:26:38 -0600
+
+
+Started GET "/assets/active_admin/ext/jquery-ui.self-f96f2ec2a32c4bc4da4292cc74bddeca0bb223d81a421c98c4d613632860945e.js?body=1" for ::1 at 2015-12-09 02:26:38 -0600
+
+
+Started GET "/assets/active_admin/ext/jquery.self-da8dafbbe883092bcae73f35a8caf4ae6170fe7d8130ae7039a233f9b509c757.js?body=1" for ::1 at 2015-12-09 02:26:38 -0600
+
+
+Started GET "/assets/active_admin/application.self-50ffc9f86e474cd52ffb7ce3b3572255ad6646ea17097a056f330b540eae402c.js?body=1" for ::1 at 2015-12-09 02:26:38 -0600
+
+
+Started GET "/assets/active_admin.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-12-09 02:26:38 -0600
+
+
+Started GET "/assets/active_admin/print.self-ec48645409640c8ceedee8b2801de0ebe935b9d5ab64f46a80d99a9186eb344c.css?body=1" for ::1 at 2015-12-09 02:26:38 -0600
+
+
+Started GET "/locations" for ::1 at 2015-12-09 02:30:21 -0600
+Processing by LocationsController#index as HTML
+  [1m[35mLocation Load (1.0ms)[0m  SELECT "locations".* FROM "locations"
+  Rendered locations/index.html.erb within layouts/application (6.0ms)
+Completed 200 OK in 285ms (Views: 283.4ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/locations/2" for ::1 at 2015-12-09 02:30:24 -0600
+Processing by LocationsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mLocation Load (1.0ms)[0m  [1mSELECT  "locations".* FROM "locations" WHERE "locations"."id" = ? LIMIT 1[0m  [["id", 2]]
+  [1m[35m (1.0ms)[0m  SELECT "hiking_trails"."link" FROM "hiking_trails" WHERE "hiking_trails"."location_id" = ?  [["location_id", 2]]
+  [1m[36m (1.0ms)[0m  [1mSELECT "hotels"."link" FROM "hotels" WHERE "hotels"."location_id" = ?[0m  [["location_id", 2]]
+  Rendered locations/_location_panel_overview.erb within layouts/application (110.2ms)
+Completed 200 OK in 434ms (Views: 364.5ms | ActiveRecord: 5.0ms)
+
+
+Started GET "/hiking_trails" for ::1 at 2015-12-09 02:31:45 -0600
+Processing by HikingTrailsController#index as HTML
+  [1m[35mHikingTrail Load (1.0ms)[0m  SELECT "hiking_trails".* FROM "hiking_trails"
+  [1m[36mLocation Load (0.0ms)[0m  [1mSELECT  "locations".* FROM "locations" WHERE "locations"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mLocation Load (0.0ms)[0m  SELECT  "locations".* FROM "locations" WHERE "locations"."id" = ? LIMIT 1  [["id", 2]]
+  Rendered hiking_trails/index.html.erb within layouts/application (70.1ms)
+Completed 200 OK in 300ms (Views: 296.4ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/hiking_trails/1" for ::1 at 2015-12-09 02:31:53 -0600
+Processing by HikingTrailsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mHikingTrail Load (1.0ms)[0m  [1mSELECT  "hiking_trails".* FROM "hiking_trails" WHERE "hiking_trails"."id" = ? LIMIT 1[0m  [["id", 1]]
+  Rendered hiking_trails/show.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 347ms (Views: 340.5ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/admin/hiking_trails" for ::1 at 2015-12-09 02:31:58 -0600
+Processing by Admin::HikingTrailsController#index as HTML
+  [1m[35mAdminUser Load (1.0ms)[0m  SELECT  "admin_users".* FROM "admin_users" WHERE "admin_users"."id" = ?  ORDER BY "admin_users"."id" ASC LIMIT 1  [["id", 1]]
+  [1m[36m (0.0ms)[0m  [1mSELECT COUNT(count_column) FROM (SELECT  1 AS count_column FROM "hiking_trails" LIMIT 30 OFFSET 0) subquery_for_count[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(count_column) FROM (SELECT  1 AS count_column FROM "hiking_trails" LIMIT 30 OFFSET 0) subquery_for_count
+  [1m[36m (0.0ms)[0m  [1mSELECT COUNT(*) FROM "hiking_trails"[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(count_column) FROM (SELECT  1 AS count_column FROM "hiking_trails" LIMIT 30 OFFSET 0) subquery_for_count
+  [1m[36mHikingTrail Load (0.0ms)[0m  [1mSELECT  "hiking_trails".* FROM "hiking_trails"  ORDER BY "hiking_trails"."id" desc LIMIT 30 OFFSET 0[0m
+  [1m[35mLocation Load (1.0ms)[0m  SELECT "locations".* FROM "locations"
+  Rendered C:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/activeadmin-1.0.0.pre2/app/views/active_admin/resource/index.html.arb (1746.6ms)
+Completed 200 OK in 1775ms (Views: 1766.6ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/admin/hotels" for ::1 at 2015-12-09 02:33:23 -0600
+Processing by Admin::HotelsController#index as HTML
+  [1m[36mAdminUser Load (1.0ms)[0m  [1mSELECT  "admin_users".* FROM "admin_users" WHERE "admin_users"."id" = ?  ORDER BY "admin_users"."id" ASC LIMIT 1[0m  [["id", 1]]
+  [1m[35m (0.0ms)[0m  SELECT COUNT(count_column) FROM (SELECT  1 AS count_column FROM "hotels" LIMIT 30 OFFSET 0) subquery_for_count
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(count_column) FROM (SELECT  1 AS count_column FROM "hotels" LIMIT 30 OFFSET 0) subquery_for_count[0m
+  [1m[35m (0.0ms)[0m  SELECT COUNT(*) FROM "hotels"
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(count_column) FROM (SELECT  1 AS count_column FROM "hotels" LIMIT 30 OFFSET 0) subquery_for_count[0m
+  [1m[35mHotel Load (0.0ms)[0m  SELECT  "hotels".* FROM "hotels"  ORDER BY "hotels"."id" desc LIMIT 30 OFFSET 0
+  [1m[36mLocation Load (1.0ms)[0m  [1mSELECT "locations".* FROM "locations"[0m
+  Rendered C:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/activeadmin-1.0.0.pre2/app/views/active_admin/resource/index.html.arb (1848.7ms)
+Completed 200 OK in 1878ms (Views: 1868.8ms | ActiveRecord: 3.0ms)
+
+
+Started GET "/admin/locations" for ::1 at 2015-12-09 02:34:34 -0600
+Processing by Admin::LocationsController#index as HTML
+  [1m[35mAdminUser Load (1.0ms)[0m  SELECT  "admin_users".* FROM "admin_users" WHERE "admin_users"."id" = ?  ORDER BY "admin_users"."id" ASC LIMIT 1  [["id", 1]]
+  [1m[36m (0.0ms)[0m  [1mSELECT COUNT(count_column) FROM (SELECT  1 AS count_column FROM "locations" LIMIT 30 OFFSET 0) subquery_for_count[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(count_column) FROM (SELECT  1 AS count_column FROM "locations" LIMIT 30 OFFSET 0) subquery_for_count
+  [1m[36m (0.0ms)[0m  [1mSELECT COUNT(*) FROM "locations"[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(count_column) FROM (SELECT  1 AS count_column FROM "locations" LIMIT 30 OFFSET 0) subquery_for_count
+  [1m[36mLocation Load (1.0ms)[0m  [1mSELECT  "locations".* FROM "locations"  ORDER BY "locations"."id" desc LIMIT 30 OFFSET 0[0m
+  [1m[35mPhoto Load (1.0ms)[0m  SELECT "photos".* FROM "photos"
+  [1m[36mHikingTrail Load (0.0ms)[0m  [1mSELECT "hiking_trails".* FROM "hiking_trails"[0m
+  [1m[35mHotel Load (1.0ms)[0m  SELECT "hotels".* FROM "hotels"
+  Rendered C:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/activeadmin-1.0.0.pre2/app/views/active_admin/resource/index.html.arb (1843.7ms)
+Completed 200 OK in 1875ms (Views: 1863.7ms | ActiveRecord: 5.0ms)
+
+
+Started GET "/admin/hotels" for ::1 at 2015-12-09 02:35:25 -0600
+Processing by Admin::HotelsController#index as HTML
+  [1m[36mAdminUser Load (0.0ms)[0m  [1mSELECT  "admin_users".* FROM "admin_users" WHERE "admin_users"."id" = ?  ORDER BY "admin_users"."id" ASC LIMIT 1[0m  [["id", 1]]
+  [1m[35m (0.0ms)[0m  SELECT COUNT(count_column) FROM (SELECT  1 AS count_column FROM "hotels" LIMIT 30 OFFSET 0) subquery_for_count
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(count_column) FROM (SELECT  1 AS count_column FROM "hotels" LIMIT 30 OFFSET 0) subquery_for_count[0m
+  [1m[35m (1.0ms)[0m  SELECT COUNT(*) FROM "hotels"
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(count_column) FROM (SELECT  1 AS count_column FROM "hotels" LIMIT 30 OFFSET 0) subquery_for_count[0m
+  [1m[35mHotel Load (2.0ms)[0m  SELECT  "hotels".* FROM "hotels"  ORDER BY "hotels"."id" desc LIMIT 30 OFFSET 0
+  [1m[36mLocation Load (0.0ms)[0m  [1mSELECT "locations".* FROM "locations"[0m
+  Rendered C:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/activeadmin-1.0.0.pre2/app/views/active_admin/resource/index.html.arb (1862.7ms)
+Completed 200 OK in 1891ms (Views: 1880.8ms | ActiveRecord: 3.0ms)
+
+
+Started GET "/admin/hiking_trails" for ::1 at 2015-12-09 02:36:53 -0600
+Processing by Admin::HikingTrailsController#index as HTML
+  [1m[35mAdminUser Load (0.0ms)[0m  SELECT  "admin_users".* FROM "admin_users" WHERE "admin_users"."id" = ?  ORDER BY "admin_users"."id" ASC LIMIT 1  [["id", 1]]
+  [1m[36m (1.0ms)[0m  [1mSELECT COUNT(count_column) FROM (SELECT  1 AS count_column FROM "hiking_trails" LIMIT 30 OFFSET 0) subquery_for_count[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(count_column) FROM (SELECT  1 AS count_column FROM "hiking_trails" LIMIT 30 OFFSET 0) subquery_for_count
+  [1m[36m (0.0ms)[0m  [1mSELECT COUNT(*) FROM "hiking_trails"[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(count_column) FROM (SELECT  1 AS count_column FROM "hiking_trails" LIMIT 30 OFFSET 0) subquery_for_count
+  [1m[36mHikingTrail Load (2.0ms)[0m  [1mSELECT  "hiking_trails".* FROM "hiking_trails"  ORDER BY "hiking_trails"."id" desc LIMIT 30 OFFSET 0[0m
+  [1m[35mLocation Load (1.0ms)[0m  SELECT "locations".* FROM "locations"
+  Rendered C:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/activeadmin-1.0.0.pre2/app/views/active_admin/resource/index.html.arb (1777.6ms)
+Completed 200 OK in 1804ms (Views: 1793.6ms | ActiveRecord: 4.0ms)
+
+
+Started GET "/admin/photos" for ::1 at 2015-12-09 02:37:37 -0600
+Processing by Admin::PhotosController#index as HTML
+  [1m[36mAdminUser Load (1.0ms)[0m  [1mSELECT  "admin_users".* FROM "admin_users" WHERE "admin_users"."id" = ?  ORDER BY "admin_users"."id" ASC LIMIT 1[0m  [["id", 1]]
+  [1m[35m (1.0ms)[0m  SELECT COUNT(count_column) FROM (SELECT  1 AS count_column FROM "photos" LIMIT 30 OFFSET 0) subquery_for_count
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(count_column) FROM (SELECT  1 AS count_column FROM "photos" LIMIT 30 OFFSET 0) subquery_for_count[0m
+  [1m[35m (1.0ms)[0m  SELECT COUNT(*) FROM "photos"
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(count_column) FROM (SELECT  1 AS count_column FROM "photos" LIMIT 30 OFFSET 0) subquery_for_count[0m
+  [1m[35mPhoto Load (0.0ms)[0m  SELECT  "photos".* FROM "photos"  ORDER BY "photos"."id" desc LIMIT 30 OFFSET 0
+  [1m[36mLocation Load (0.0ms)[0m  [1mSELECT "locations".* FROM "locations"[0m
+  Rendered C:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/activeadmin-1.0.0.pre2/app/views/active_admin/resource/index.html.arb (1797.6ms)
+Completed 200 OK in 1829ms (Views: 1818.7ms | ActiveRecord: 3.0ms)
+
+
+Started GET "/photos" for ::1 at 2015-12-09 02:38:04 -0600
+Processing by PhotosController#index as HTML
+  [1m[35mPhoto Load (1.0ms)[0m  SELECT "photos".* FROM "photos"
+  [1m[36mLocation Load (0.0ms)[0m  [1mSELECT  "locations".* FROM "locations" WHERE "locations"."id" = ? LIMIT 1[0m  [["id", 2]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "locations".* FROM "locations" WHERE "locations"."id" = ? LIMIT 1  [["id", 2]]
+  [1m[36mLocation Load (0.0ms)[0m  [1mSELECT  "locations".* FROM "locations" WHERE "locations"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "locations".* FROM "locations" WHERE "locations"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered photos/index.html.erb within layouts/application (17.0ms)
+Completed 200 OK in 374ms (Views: 372.6ms | ActiveRecord: 1.0ms)
